@@ -39,27 +39,27 @@ public class Main {
             array3[i] = (char) (i + 65);
         }
         for (int i = 0; i < array1.length; i++) {
-            if (i < (array1.length - 1)) {
-                System.out.print(array1[i] + ", ");
-            } else {
+            if (i == (array1.length - 1)) {
                 System.out.print(array1[i]);
+                break;
             }
+            System.out.print(array1[i] + ", ");
         }
         System.out.println();
         for (int i = 0; i < array2.length; i++) {
-            if (i < (array1.length - 1)) {
-                System.out.print(array2[i] + ", ");
-            } else {
+            if (i == (array2.length - 1)) {
                 System.out.print(array2[i]);
+                break;
             }
+            System.out.print(array2[i] + ", ");
         }
         System.out.println();
         for (int i = 0; i < array3.length; i++) {
-            if (i < (array3.length - 1)) {
-                System.out.print(array3[i] + ", ");
-            } else {
+            if (i == (array3.length - 1)) {
                 System.out.print(array3[i]);
+                break;
             }
+            System.out.print(array3[i] + ", ");
         }
         System.out.println();
 
@@ -77,27 +77,27 @@ public class Main {
             array3[i] = (char) (i + 65);
         }
         for (int i = array1.length - 1; i >= 0; i--) {
-            if (i > 0) {
-                System.out.print(array1[i] + ", ");
-            } else {
+            if (i == 0) {
                 System.out.print(array1[i]);
+                break;
             }
+            System.out.print(array1[i] + ", ");
         }
         System.out.println();
         for (int i = array2.length - 1; i >= 0; i--) {
-            if (i > 0) {
-                System.out.print(array2[i] + ", ");
-            } else {
+            if (i == 0) {
                 System.out.print(array2[i]);
+                break;
             }
+            System.out.print(array2[i] + ", ");
         }
         System.out.println();
         for (int i = array3.length - 1; i >= 0; i--) {
-            if (i > 0) {
-                System.out.print(array3[i] + ", ");
-            } else {
+            if (i == 0) {
                 System.out.print(array3[i]);
+                break;
             }
+            System.out.print(array3[i] + ", ");
         }
         System.out.println();
     }
@@ -109,11 +109,19 @@ public class Main {
         array1[1] = 2;
         array1[2] = 3;
         for (int i = 0; i < array1.length; i++) {
+            if (i == array1.length - 1 && array1[i] % 2 != 0) {
+                array1[i] += 1;
+                System.out.print(array1[i]);
+                break;
+            } else if (i == array1.length - 1) {
+                System.out.print(array1[i]);
+                break;
+            }
             if (array1[i] % 2 != 0) {
                 array1[i] += 1;
-                System.out.print(array1[i] + " ");
+                System.out.print(array1[i] + ", ");
             } else {
-                System.out.print(array1[i] + " ");
+                System.out.print(array1[i] + ", ");
             }
         }
         System.out.println();
